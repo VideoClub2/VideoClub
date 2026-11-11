@@ -1,29 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Catalogo from './components/Catalogo';
 import Ubicacion from './components/Ubicacion';
+import AddMovie from './pages/AddMovie';
 import styles from './App.module.css';
 
 export default function App() {
-  // Estado para controlar qué sección está visible actualmente
-  const [vistaActiva, setVistaActiva] = useState('catalogo');
-
   return (
-    <div className={styles.appContenedor}>
-      {/* Pasamos el estado y la función al Navbar */}
-      <Navbar vistaActiva={vistaActiva} setVistaActiva={setVistaActiva} />
+    <BrowserRouter>
+      <div className={styles.appContenedor}>
+        <Navbar />
 
-      <main>
-        {/* Muestra únicamente el Catálogo cuando la vista es 'catalogo' */}
-        {vistaActiva === 'catalogo' && <Catalogo />}
+        <main>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Catalogo />
+                  <Ubicacion />
+                </>
+              }
+            />
+            <Route path="/add-movie" element={<AddMovie />} />
+          </Routes>
+        </main>
 
-        {/* Muestra únicamente la Ubicación cuando la vista es 'ubicacion' */}
-        {vistaActiva === 'ubicacion' && <Ubicacion />}
-      </main>
-
-      <footer className={styles.appFooter}>
-        <p>© Fantasía Videoclub. Todos los derechos reservados.</p>
-      </footer>
-    </div>
+        <footer className={styles.appFooter}>
+          <p>© Fantasía Videoclub. Todos los derechos reservados.</p>
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
