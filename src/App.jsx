@@ -1,23 +1,31 @@
-import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
-import Catalogo from './components/Catalogo';
+import Index from './pages/Index';
+import Catalogo from './pages/Catalogo';
+import Ubicacion from './pages/Ubicacion';
+import AddMovie from './pages/AddMovie';
 import styles from './App.module.css';
 
 export default function App() {
   return (
-    <div className={styles.appContenedor}>
-      {/* Navbar General */}
-      <Navbar />
+    <BrowserRouter>
+      <div className={styles.appContenedor}>
+        <Navbar />
 
-      {/* Sección principal del catálogo */}
-      <main>
-        <Catalogo />
-      </main>
+        <main>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/catalogo" element={<Catalogo />} />
+            <Route path="/ubicacion" element={<Ubicacion />} />
+            <Route path="/add-movie" element={<AddMovie />} />
+          </Routes>
+        </main>
 
-      {/* Footer */}
-      <footer className={styles.appFooter}>
-        <p>© Fantasía Videoclub. Todos los derechos reservados.</p>
-      </footer>
-    </div>
+        <footer className={styles.appFooter}>
+          <p>© Fantasía Videoclub. Todos los derechos reservados.</p>
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
