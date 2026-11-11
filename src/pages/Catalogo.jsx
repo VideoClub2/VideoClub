@@ -12,6 +12,7 @@ export default function Catalogo() {
   const [cargando, setCargando] = useState(true);
   const [errorCarga, setErrorCarga] = useState(false);
   const [intentoCarga, setIntentoCarga] = useState(0);
+  const [peliculaSeleccionada, setPeliculaSeleccionada] = useState(null);
 
   const filtros = ['TODAS', 'POPULARES', 'NUEVAS', 'CALIFICACIÓN', 'AÑO', 'GÉNERO'];
 
@@ -139,9 +140,12 @@ export default function Catalogo() {
         <>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             {peliculasVisibles.map((pelicula) => (
-              <div
+              <button
                 key={pelicula.id}
-                className="group relative h-[360px] overflow-hidden rounded-2xl border border-slate-700 bg-[#080d19] shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-red-500"
+                type="button"
+                onClick={() => setPeliculaSeleccionada(pelicula)}
+                aria-label={`Ver detalles de ${pelicula.titulo}`}
+                className="group relative h-[360px] w-full overflow-hidden rounded-2xl border border-slate-700 bg-[#080d19] text-left shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-red-500"
               >
                 <img
                   src={pelicula.portada}
@@ -169,7 +173,7 @@ export default function Catalogo() {
                     </h3>
                   </div>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
 
@@ -185,6 +189,40 @@ export default function Catalogo() {
             </div>
           )}
         </>
+      )}
+
+      {peliculaSeleccionada && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4"
+          onClick={() => setPeliculaSeleccionada(null)}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="pelicula-catalogo-titulo"
+            className="w-full max-w-lg rounded-xl border border-slate-700 bg-[#111827] p-6"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <h2 id="pelicula-catalogo-titulo" className="text-2xl font-bold">
+              {peliculaSeleccionada.titulo}
+            </h2>
+            <p className="mt-4 text-slate-300">
+              <strong>Género:</strong> {peliculaSeleccionada.genero}
+              {' · '}
+              <strong>Año:</strong> {peliculaSeleccionada.anio}
+              {' · '}
+              <strong>Calificación:</strong> {peliculaSeleccionada.calificacion} ★
+            </p>
+            <p className="mt-3 text-slate-400">{peliculaSeleccionada.desc}</p>
+            <button
+              type="button"
+              onClick={() => setPeliculaSeleccionada(null)}
+              className="mt-6 rounded-lg bg-red-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-red-700"
+            >
+              Cerrar
+            </button>
+          </section>
+        </div>
       )}
     </PageLayout>
   );

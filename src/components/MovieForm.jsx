@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 export default function MovieForm() {
 
 const [formData, setFormData] = useState({
     titulo: '',
+    desc: '',
     genero: '',
     calificacion: '',
     anio: '',
@@ -39,6 +40,7 @@ const handleSubmit = async (e) => {
 
         setFormData({
             titulo: '',
+            desc: '',
             genero: '',
             calificacion: '',
             anio: '',
@@ -68,6 +70,23 @@ const handleSubmit = async (e) => {
                     onChange={handleChange}
                     required
                     placeholder="Ej. Interstellar"
+                    className="w-full rounded-lg bg-slate-100 px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-red-500"
+                />
+            </div>
+
+            <div className="flex flex-col gap-2">
+                <label htmlFor="desc" className="font-semibold text-white">
+                    Descripción
+                </label>
+
+                <textarea
+                    id="desc"
+                    name="desc"
+                    value={formData.desc}
+                    onChange={handleChange}
+                    required
+                    rows="3"
+                    placeholder="Describe brevemente la película"
                     className="w-full rounded-lg bg-slate-100 px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-red-500"
                 />
             </div>

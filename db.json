@@ -3,6 +3,7 @@
     {
       "id": "1",
       "titulo": "La venganza",
+      "desc": "Tras una traición, una persona emprende un camino de justicia que pondrá a prueba sus límites.",
       "genero": "ACCIÓN",
       "calificacion": 4.8,
       "anio": 2024,
@@ -11,6 +12,7 @@
     {
       "id": "2",
       "titulo": "El silencio",
+      "desc": "Un secreto guardado durante años amenaza con cambiar la vida de quienes intentan seguir adelante.",
       "genero": "DRAMA",
       "calificacion": 4.6,
       "anio": 2023,
@@ -19,6 +21,7 @@
     {
       "id": "3",
       "titulo": "Harry Potter y la piedra filosofal",
+      "desc": "Harry descubre que es mago y comienza una nueva vida en Hogwarts, donde hará amigos y enfrentará un peligro oculto.",
       "genero": "DRAMA",
       "calificacion": 4.6,
       "anio": 2001,
@@ -27,6 +30,7 @@
     {
       "id": "movies-data-1",
       "titulo": "ElRegreso",
+      "desc": "Después de una larga ausencia, un hombre vuelve a casa para afrontar el pasado y reconstruir su vida.",
       "genero": "ACCIÓN",
       "calificacion": 4.8,
       "anio": 2024,
@@ -35,6 +39,7 @@
     {
       "id": "movies-data-2",
       "titulo": "LaEraDeHielo",
+      "desc": "Un grupo de amigos se embarca en una aventura entre paisajes helados y desafíos inesperados.",
       "genero": "DRAMA",
       "calificacion": 4.6,
       "anio": 2023,
@@ -43,6 +48,7 @@
     {
       "id": "movies-data-3",
       "titulo": "LosIncreibles",
+      "desc": "Una familia con habilidades extraordinarias une fuerzas para proteger su hogar y trabajar en equipo.",
       "genero": "CIENCIA",
       "calificacion": 4.9,
       "anio": 2024,
@@ -51,6 +57,7 @@
     {
       "id": "movies-data-4",
       "titulo": "Madagascar",
+      "desc": "Un grupo de animales deja su vida de zoológico atrás y descubre una isla llena de sorpresas.",
       "genero": "COMEDIA",
       "calificacion": 4.7,
       "anio": 2024,
@@ -59,6 +66,7 @@
     {
       "id": "movies-data-5",
       "titulo": "Shrek1",
+      "desc": "Un ogro solitario acepta una misión que lo lleva a conocer a un burro parlanchín y a una princesa.",
       "genero": "SUSPENSO",
       "calificacion": 4.8,
       "anio": 2024,
@@ -67,6 +75,7 @@
     {
       "id": "movies-data-6",
       "titulo": "Shrek2",
+      "desc": "Shrek y Fiona visitan el reino de Muy Muy Lejano, donde la familia y las apariencias complican su vida.",
       "genero": "ROMANCE",
       "calificacion": 4.5,
       "anio": 2024,
@@ -75,6 +84,7 @@
     {
       "id": "movies-data-7",
       "titulo": "Shrek3",
+      "desc": "Shrek emprende un viaje para encontrar al heredero del reino y decidir qué futuro desea.",
       "genero": "ACCIÓN",
       "calificacion": 4.3,
       "anio": 2022,
@@ -83,6 +93,7 @@
     {
       "id": "movies-data-8",
       "titulo": "ToyStory1",
+      "desc": "Woody ve cambiar su lugar como juguete favorito cuando llega Buzz Lightyear, y ambos deben aprender a cooperar.",
       "genero": "SUSPENSO",
       "calificacion": 4.1,
       "anio": 2021,
@@ -91,6 +102,7 @@
     {
       "id": "movies-data-9",
       "titulo": "ToyStory2",
+      "desc": "Woody es separado de sus amigos y descubre una parte desconocida de su historia como juguete.",
       "genero": "CIENCIA",
       "calificacion": 4.7,
       "anio": 2023,
@@ -99,6 +111,7 @@
     {
       "id": "movies-data-10",
       "titulo": "ToyStory3",
+      "desc": "Ante una nueva etapa en la vida de Andy, Woody y sus amigos buscan juntos un lugar al que pertenecer.",
       "genero": "COMEDIA",
       "calificacion": 3.9,
       "anio": 2022,
@@ -107,6 +120,7 @@
     {
       "id": "movies-data-11",
       "titulo": "ToyStory4",
+      "desc": "Woody acompaña a Forky en un viaje que lo lleva a reencontrarse con viejos amigos y tomar nuevas decisiones.",
       "genero": "DRAMA",
       "calificacion": 4.9,
       "anio": 2024,
@@ -115,6 +129,7 @@
     {
       "id": "movies-data-12",
       "titulo": "dune1",
+      "desc": "En un planeta desértico, Paul Atreides se ve envuelto en una lucha por el poder y un recurso muy valioso.",
       "genero": "ROMANCE",
       "calificacion": 4.2,
       "anio": 2023,
@@ -123,6 +138,7 @@
     {
       "id": "movies-data-13",
       "titulo": "Elementos",
+      "desc": "En una ciudad donde conviven los elementos, una joven de fuego conoce a alguien que cambia su forma de ver el mundo.",
       "genero": "ACCIÓN",
       "calificacion": 4.6,
       "anio": 2023,
@@ -131,6 +147,7 @@
     {
       "id": "movies-data-14",
       "titulo": "HastaElUltimoHombre",
+      "desc": "Un médico militar se enfrenta a la guerra y trata de salvar vidas sin renunciar a sus convicciones.",
       "genero": "SUSPENSO",
       "calificacion": 4.4,
       "anio": 2021,
@@ -139,6 +156,7 @@
     {
       "id": "movies-data-15",
       "titulo": "LeeMiller",
+      "desc": "La fotógrafa y corresponsal Lee Miller documenta momentos cruciales de la guerra y la historia.",
       "genero": "CIENCIA",
       "calificacion": 4.8,
       "anio": 2024,
@@ -147,6 +165,7 @@
     {
       "id": "movies-data-16",
       "titulo": "Marte",
+      "desc": "Un astronauta queda aislado en Marte y recurre a su ingenio para sobrevivir hasta poder volver a casa.",
       "genero": "ROMANCE",
       "calificacion": 4.0,
       "anio": 2020,
@@ -155,6 +174,7 @@
     {
       "id": "movies-data-17",
       "titulo": "MartinFreeman",
+      "desc": "Una historia dramática sigue a sus personajes mientras afrontan decisiones y cambios importantes.",
       "genero": "DRAMA",
       "calificacion": 4.5,
       "anio": 2022,
@@ -163,6 +183,7 @@
     {
       "id": "movies-data-18",
       "titulo": "PrimerHombre",
+      "desc": "Un astronauta y su equipo afrontan los riesgos de una misión pionera que los acerca a la Luna.",
       "genero": "COMEDIA",
       "calificacion": 3.8,
       "anio": 2021,
