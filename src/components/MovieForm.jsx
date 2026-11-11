@@ -10,14 +10,23 @@ export default function MovieForm() {
     });
     const handleChange = (e) => {
         const { name, value } = e.target;
-
         setFormData({
             ...formData,
             [name]: value
         });
     };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const nuevaPelicula = {
+            ...formData,
+            calificacion: Number(formData.calificacion),
+            anio: Number(formData.anio)
+        };
+
+        console.log('Nueva película:', nuevaPelicula);
+    };
     return (
-        <form className="flex flex-col gap-6">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
 
             {/* Movie title */}
             <div className="flex flex-col gap-2">
@@ -31,6 +40,7 @@ export default function MovieForm() {
                     name="titulo"
                     value={formData.titulo}
                     onChange={handleChange}
+                    required
                     placeholder="Ej. Interstellar"
                     className="w-full rounded-lg bg-slate-100 px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-red-500"
                 />
@@ -47,7 +57,7 @@ export default function MovieForm() {
                     name="genero"
                     value={formData.genero}
                     onChange={handleChange}
-                    defaultValue=""
+                    required
                     className="w-full rounded-lg bg-slate-100 px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-red-500"
                 >
                     <option value="" disabled>Selecciona un género</option>
@@ -75,6 +85,7 @@ export default function MovieForm() {
                     step="0.1"
                     value={formData.calificacion}
                     onChange={handleChange}
+                    required
                     placeholder="Ej. 4.8"
                     className="w-full rounded-lg bg-slate-100 px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-red-500"
                 />
@@ -90,6 +101,7 @@ export default function MovieForm() {
                     type="number"
                     id="anio"
                     name="anio"
+                    required
                     value={formData.anio}
                     onChange={handleChange}
                     min="1888"
@@ -110,6 +122,7 @@ export default function MovieForm() {
                     name="portada"
                     value={formData.portada}
                     onChange={handleChange}
+                    required
                     placeholder="https://..."
                     className="w-full rounded-lg bg-slate-100 px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-red-500"
                 />

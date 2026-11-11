@@ -1,0 +1,20 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "titulo": "La venganza",
+      "genero": "ACCIÓN",
+      "calificacion": 4.8,
+      "anio": 2024,
+      "portada": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "id": "2",
+      "titulo": "El silencio",
+      "genero": "DRAMA",
+      "calificacion": 4.6,
+      "anio": 2023,
+      "portada": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500&auto=format&fit=crop"
+    }
+  ]
+}
