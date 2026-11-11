@@ -1,30 +1,56 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 export default function MovieForm() {
-    const [formData, setFormData] = useState({
-        titulo: '',
-        genero: '',
-        calificacion: '',
-        anio: '',
-        portada: ''
-    });
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const nuevaPelicula = {
-            ...formData,
-            calificacion: Number(formData.calificacion),
-            anio: Number(formData.anio)
-        };
 
-        console.log('Nueva película:', nuevaPelicula);
+const [formData, setFormData] = useState({
+    titulo: '',
+    genero: '',
+    calificacion: '',
+    anio: '',
+    portada: ''
+});
+
+const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+        ...formData,
+        [name]: value
+    });
+};
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const nuevaPelicula = {
+        ...formData,
+        calificacion: Number(formData.calificacion),
+        anio: Number(formData.anio)
     };
+
+    try {
+        const respuesta = await axios.post(
+            'http://localhost:3000/movies',
+            nuevaPelicula
+        );
+
+        console.log('Película añadida:', respuesta.data);
+        alert('¡Película añadida correctamente!');
+
+        setFormData({
+            titulo: '',
+            genero: '',
+            calificacion: '',
+            anio: '',
+            portada: ''
+        });
+
+    } catch (error) {
+        console.error('Error al añadir la película:', error);
+        alert('No se ha podido añadir la película.');
+    }
+};
+
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
 
@@ -149,4 +175,5 @@ export default function MovieForm() {
 
         </form>
     );
+
 }

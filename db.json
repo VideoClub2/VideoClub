@@ -15,6 +15,15 @@
       "calificacion": 4.6,
       "anio": 2023,
       "portada": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      "titulo": "Harry Potter y la piedra filosofal",
+      "genero": "DRAMA",
+      "calificacion": 4.6,
+      "anio": 2001,
+      "portada": "https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
+      "id": "TW4TXDVWNOg"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
