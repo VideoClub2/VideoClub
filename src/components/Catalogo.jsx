@@ -1,20 +1,56 @@
 import React, { useState } from 'react';
-import peliculasIniciales from '../data/moviesData.json';
+import peliculasTotales from '../data/moviesData.json'; // Todas tus 20+ películas
 import styles from './Catalogo.module.css';
 
 export default function Catalogo() {
   const [filtroActivo, setFiltroActivo] = useState('TODAS');
-  const [peliculas, setPeliculas] = useState(peliculasIniciales);
+  
+  // Estado para llevar la lista completa de películas filtradas/ordenadas
+  const [peliculas, setPeliculas] = useState(peliculasTotales);
+  
+  // 1. Estado para controlar cuántas películas se muestran visiblemente (ej. empezamos mostrando 6 o 9)
+  const [limiteVisible, setLimiteVisible] = useState(9);
 
   const filtros = ['TODAS', 'POPULARES', 'NUEVAS', 'CALIFICACIÓN', 'AÑO', 'GÉNERO'];
 
-  const handleCargarMas = () => {
-    const masPeliculas = peliculasIniciales.map((peli) => ({
-      ...peli,
-      id: peli.id + peliculas.length,
-    }));
-    setPeliculas((prev) => [...prev, ...masPeliculas]);
+  // Función para ordenar las películas
+  const handleFiltroClick = (filtro) => {
+    setFiltroActivo(filtro);
+    setLimiteVisible(6); // Reseteamos la vista al cambiar de filtro
+
+    let peliculasOrdenadas = [...peliculasTotales];
+
+    switch (filtro) {
+      case 'POPULARES':
+      case 'CALIFICACIÓN':
+        peliculasOrdenadas.sort((a, b) => b.calificacion - a.calificacion);
+        break;
+      case 'NUEVAS':
+        peliculasOrdenadas.sort((a, b) => b.anio - a.anio);
+        break;
+      case 'AÑO':
+        peliculasOrdenadas.sort((a, b) => a.anio - b.anio);
+        break;
+      case 'GÉNERO':
+        peliculasOrdenadas.sort((a, b) => a.genero.localeCompare(b.genero));
+        break;
+      case 'TODAS':
+      default:
+        peliculasOrdenadas = [...peliculasTotales];
+        break;
+    }
+
+    setPeliculas(peliculasOrdenadas);
   };
+
+  // 2. Función para mostrar más películas del JSON sin repetir
+  const handleCargarMas = () => {
+    // Aumentamos el límite visible en 6 más (o el número que prefieras)
+    setLimiteVisible((prevLimite) => prevLimite + 9);
+  };
+
+  // 3. Cortamos el arreglo para mostrar únicamente desde la primera hasta el límite actual
+  const peliculasVisibles = peliculas.slice(0, limiteVisible);
 
   return (
     <section className={styles.contenedor}>
@@ -24,7 +60,7 @@ export default function Catalogo() {
         {filtros.map((filtro) => (
           <button
             key={filtro}
-            onClick={() => setFiltroActivo(filtro)}
+            onClick={() => handleFiltroClick(filtro)}
             className={`${styles.filtroBtn} ${filtroActivo === filtro ? styles.filtroBtnActivo : ''}`}
           >
             {filtro}
@@ -32,15 +68,17 @@ export default function Catalogo() {
         ))}
       </div>
 
-      {/* 2. Encabezado de la Sección */}
+      {/* 2. Encabezado */}
       <div className={styles.headerSeccion}>
         <h1 className={styles.titulo}>Catálogo</h1>
-        <p className={styles.subtitulo}>Explora películas y series</p>
+        <p className={styles.subtitulo}>
+          Explora películas y series {filtroActivo !== 'TODAS' && `• Ordenado por: ${filtroActivo}`}
+        </p>
       </div>
 
-      {/* 3. Grid de Películas */}
+      {/* 3. Grid de Películas (Mostramos solo las cortadas por 'peliculasVisibles') */}
       <div className={styles.gridPeliculas}>
-        {peliculas.map((pelicula) => (
+        {peliculasVisibles.map((pelicula) => (
           <div key={pelicula.id} className={styles.tarjeta}>
             <img
               src={pelicula.portada}
@@ -49,7 +87,6 @@ export default function Catalogo() {
             />
 
             <div className={styles.overlay}>
-              {/* Etiqueta Superior */}
               <div className={styles.infoSuperior}>
                 <span className={styles.badgeGenero}>
                   {pelicula.genero}
@@ -60,7 +97,6 @@ export default function Catalogo() {
                 </div>
               </div>
 
-              {/* Información Inferior */}
               <div className={styles.infoInferior}>
                 <span className={styles.anio}>
                   {pelicula.anio}
@@ -74,12 +110,14 @@ export default function Catalogo() {
         ))}
       </div>
 
-      {/* 4. Botón de Cargar más */}
-      <div className={styles.cargarMasContenedor}>
-        <button onClick={handleCargarMas} className={styles.cargarMasBtn}>
-          Cargar más películas...
-        </button>
-      </div>
+      {/* 4. Botón de Cargar más (Se oculta si ya se muestran todas las películas del JSON) */}
+      {limiteVisible < peliculas.length && (
+        <div className={styles.cargarMasContenedor}>
+          <button onClick={handleCargarMas} className={styles.cargarMasBtn}>
+            Cargar más películas...
+          </button>
+        </div>
+      )}
 
     </section>
   );
