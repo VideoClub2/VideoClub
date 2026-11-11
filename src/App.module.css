@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.appContenedor {
+  @apply min-h-screen bg-[#070b14];
+}
+
+.appFooter {
+  @apply bg-[#04070d] border-t border-slate-900 text-slate-400 px-8 py-6 text-xs text-center;
+}

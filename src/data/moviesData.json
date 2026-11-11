@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "titulo": "La venganza",
+    "genero": "ACCIÓN",
+    "calificacion": 4.8,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 2,
+    "titulo": "El silencio",
+    "genero": "DRAMA",
+    "calificacion": 4.6,
+    "anio": 2023,
+    "portada": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "titulo": "El universo",
+    "genero": "CIENCIA",
+    "calificacion": 4.9,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 4,
+    "titulo": "La broma",
+    "genero": "COMEDIA",
+    "calificacion": 4.7,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 5,
+    "titulo": "La sombra",
+    "genero": "SUSPENSO",
+    "calificacion": 4.8,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 6,
+    "titulo": "El regreso",
+    "genero": "ROMANCE",
+    "calificacion": 4.5,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1518676599625-58328734208a?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 7,
+    "titulo": "La broma II",
+    "genero": "COMEDIA",
+    "calificacion": 4.7,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 8,
+    "titulo": "La sombra II",
+    "genero": "SUSPENSO",
+    "calificacion": 4.8,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": 9,
+    "titulo": "El regreso II",
+    "genero": "ROMANCE",
+    "calificacion": 4.5,
+    "anio": 2024,
+    "portada": "https://images.unsplash.com/photo-1518676599625-58328734208a?q=80&w=500&auto=format&fit=crop"
+  }
+]
