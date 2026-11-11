@@ -1,16 +1,33 @@
 
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import AddMovie from './pages/AddMovie'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+import Navbar from './components/Navbar';
+import Catalogo from './components/Catalogo';
+import AddMovie from './pages/AddMovie';
+
+import styles from './App.module.css';
+
+export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/add-movie" element={<AddMovie />} />
-        <Route path="*" element={<Navigate to="/add-movie" replace />} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
+      <div className={styles.appContenedor}>
+        {/* Navbar General */}
+        <Navbar />
 
-export default App
+        {/* Contenido según la ruta */}
+        <main>
+          <Routes>
+            <Route path="/" element={<Catalogo />} />
+            <Route path="/add-movie" element={<AddMovie />} />
+          </Routes>
+        </main>
+
+        {/* Footer */}
+        <footer className={styles.appFooter}>
+          <p>© Fantasía Videoclub. Todos los derechos reservados.</p>
+        </footer>
+      </div>
+    </BrowserRouter>
+  );
+}
