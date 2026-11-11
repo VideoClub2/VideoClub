@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+.contenedor {
+  @apply min-h-screen bg-[#070b14] text-white px-4 md:px-12 py-12 font-sans;
+}
+
+.headerSeccion {
+  @apply mb-10 text-center md:text-left;
+}
+
+.titulo {
+  @apply text-3xl md:text-4xl font-extrabold tracking-wide mb-2;
+}
+
+.subtitulo {
+  @apply text-slate-400 text-sm md:text-base;
+}
+
+/* Grid principal: Mapa a un lado, Info al otro */
+.gridUbicacion {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-8 items-start;
+}
+
+/* Tarjeta de información */
+.infoCard {
+  @apply bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-6 lg:col-span-1;
+}
+
+.infoItem {
+  @apply flex items-start space-x-4;
+}
+
+.iconoBox {
+  @apply w-10 h-10 rounded-xl bg-red-600/20 text-red-500 flex items-center justify-center font-bold text-lg shrink-0 border border-red-500/30;
+}
+
+.infoTitulo {
+  @apply text-sm font-bold text-slate-300 uppercase tracking-wider;
+}
+
+.infoTexto {
+  @apply text-sm text-slate-400 mt-1;
+}
+
+/* Contenedor del Mapa */
+.mapaContainer {
+  @apply lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl h-[400px] md:h-[450px] relative;
+}
+
+.mapaIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* Usamos CSS nativo para asegurar que el mapa se vea oscuro sin errores de Tailwind */
+  filter: invert(90%) hue-rotate(180deg) contrast(125%);
+  opacity: 0.85;
+}
+
+.mapaOverlayInfo {
+  @apply absolute bottom-4 left-4 right-4 bg-[#0a0f1d]/90 backdrop-blur-md border border-slate-800 p-4 rounded-xl flex flex-col sm:flex-row justify-between items-center gap-3;
+}

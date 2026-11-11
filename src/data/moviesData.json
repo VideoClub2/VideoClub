@@ -1,74 +1,146 @@
 [
   {
     "id": 1,
-    "titulo": "La venganza",
+    "titulo": "ElRegreso",
     "genero": "ACCIÓN",
     "calificacion": 4.8,
     "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500&auto=format&fit=crop"
+    "portada": "/imagenes/ElRegreso.jpg"
   },
   {
     "id": 2,
-    "titulo": "El silencio",
+    "titulo": "LaEraDeHielo",
     "genero": "DRAMA",
     "calificacion": 4.6,
     "anio": 2023,
-    "portada": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500&auto=format&fit=crop"
+    "portada": "/imagenes/LaEraDeHielo.jpg"
   },
   {
     "id": 3,
-    "titulo": "El universo",
+    "titulo": "LosIncreibles",
     "genero": "CIENCIA",
     "calificacion": 4.9,
     "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500&auto=format&fit=crop"
+    "portada": "/imagenes/LosIncreibles.jpg"
   },
   {
     "id": 4,
-    "titulo": "La broma",
+    "titulo": "Madagascar",
     "genero": "COMEDIA",
     "calificacion": 4.7,
     "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=500&auto=format&fit=crop"
+    "portada": "/imagenes/Madagascar.jpg"
   },
   {
     "id": 5,
-    "titulo": "La sombra",
+    "titulo": "Shrek1",
     "genero": "SUSPENSO",
     "calificacion": 4.8,
     "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=500&auto=format&fit=crop"
+    "portada": "/imagenes/Shrek1.jpg"
   },
   {
     "id": 6,
-    "titulo": "El regreso",
+    "titulo": "Shrek2",
     "genero": "ROMANCE",
     "calificacion": 4.5,
     "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1518676599625-58328734208a?q=80&w=500&auto=format&fit=crop"
+    "portada": "/imagenes/Shrek2.jpg"
   },
   {
     "id": 7,
-    "titulo": "La broma II",
-    "genero": "COMEDIA",
-    "calificacion": 4.7,
-    "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=500&auto=format&fit=crop"
+    "titulo": "Shrek3",
+    "genero": "ACCIÓN",
+    "calificacion": 4.3,
+    "anio": 2022,
+    "portada": "/imagenes/Shrek3.jpg"
   },
   {
     "id": 8,
-    "titulo": "La sombra II",
+    "titulo": "ToyStory1",
     "genero": "SUSPENSO",
-    "calificacion": 4.8,
-    "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=500&auto=format&fit=crop"
+    "calificacion": 4.1,
+    "anio": 2021,
+    "portada": "/imagenes/ToyStory1.jpg"
   },
   {
     "id": 9,
-    "titulo": "El regreso II",
-    "genero": "ROMANCE",
-    "calificacion": 4.5,
+    "titulo": "ToyStory2",
+    "genero": "CIENCIA",
+    "calificacion": 4.7,
+    "anio": 2023,
+    "portada": "/imagenes/ToyStory2.jpg"
+  },
+  {
+    "id": 10,
+    "titulo": "ToyStory3",
+    "genero": "COMEDIA",
+    "calificacion": 3.9,
+    "anio": 2022,
+    "portada": "/imagenes/ToyStory3.jpg"
+  },
+  {
+    "id": 11,
+    "titulo": "ToyStory4",
+    "genero": "DRAMA",
+    "calificacion": 4.9,
     "anio": 2024,
-    "portada": "https://images.unsplash.com/photo-1518676599625-58328734208a?q=80&w=500&auto=format&fit=crop"
+    "portada": "/imagenes/ToyStory4.jpg"
+  },
+  {
+    "id": 12,
+    "titulo": "dune1",
+    "genero": "ROMANCE",
+    "calificacion": 4.2,
+    "anio": 2023,
+    "portada": "/imagenes/dune1.jpg"
+  },
+  {
+    "id": 13,
+    "titulo": "Elementos",
+    "genero": "ACCIÓN",
+    "calificacion": 4.6,
+    "anio": 2023,
+    "portada": "/imagenes/Elementos.jpg"
+  },
+  {
+    "id": 14,
+    "titulo": "HastaElUltimoHombre",
+    "genero": "SUSPENSO",
+    "calificacion": 4.4,
+    "anio": 2021,
+    "portada": "/imagenes/HastaElUltimoHombre.jpg"
+  },
+  {
+    "id": 15,
+    "titulo": "LeeMiller",
+    "genero": "CIENCIA",
+    "calificacion": 4.8,
+    "anio": 2024,
+    "portada": "/imagenes/LeeMiller.jpg"
+  },
+  {
+    "id": 16,
+    "titulo": "Marte",
+    "genero": "ROMANCE",
+    "calificacion": 4.0,
+    "anio": 2020,
+    "portada": "/imagenes/Marte.jpg"
+  },
+  {
+    "id": 17,
+    "titulo": "MartinFreeman",
+    "genero": "DRAMA",
+    "calificacion": 4.5,
+    "anio": 2022,
+    "portada": "/imagenes/MartinFreeman.jpg"
+  },
+  {
+    "id": 18,
+    "titulo": "PrimerHombre",
+    "genero": "COMEDIA",
+    "calificacion": 3.8,
+    "anio": 2021,
+    "portada": "/imagenes/PrimerHombre.jpg"
   }
 ]
