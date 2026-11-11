@@ -1,54 +1,34 @@
 @import "tailwindcss";
 
-/* Contenedor general */
-.contenedor {
-  @apply min-h-screen bg-[#070b14] text-white px-4 md:px-12 py-8 font-sans;
-}
-
-/* Filtros */
 .filtrosContenedor {
-  @apply flex flex-wrap justify-center md:justify-start gap-3 mb-8;
+  @apply mb-8 flex flex-wrap justify-center gap-3;
 }
 
 .filtroBtn {
-  @apply px-5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 border cursor-pointer bg-transparent text-slate-300 border-slate-700 hover:border-slate-400;
+  @apply cursor-pointer rounded-full border border-slate-700 bg-transparent px-5 py-1.5 text-xs font-bold text-slate-300 transition-all duration-200 hover:border-red-500;
 }
 
 .filtroBtnActivo {
-  @apply bg-white text-black border-white shadow-md shadow-white/10;
+  @apply border-red-600 bg-red-600 text-white shadow-md shadow-red-600/20;
 }
 
-/* Encabezado */
-.headerSeccion {
-  @apply mb-6;
-}
-
-.titulo {
-  @apply text-3xl md:text-4xl font-extrabold tracking-wide mb-1;
-}
-
-.subtitulo {
-  @apply text-slate-400 text-sm;
-}
-
-/* Grid y Tarjetas */
 .gridPeliculas {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6;
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3;
 }
 
 .tarjeta {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  background-color: rgb(15 23 42);
-  border: 1px solid rgb(30 41 59);
+  background-color: #080d19;
+  border: 1px solid rgb(51 65 85);
   transition: all 0.3s ease;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
   height: 360px;
 }
 
 .tarjeta:hover {
-  border-color: rgb(71 85 105);
+  border-color: rgb(239 68 68);
   transform: scale(1.02);
 }
 
@@ -73,7 +53,6 @@
   justify-content: space-between;
 }
 
-/* Detalles internos de la tarjeta */
 .infoSuperior {
   @apply flex items-center justify-between;
 }
@@ -104,11 +83,10 @@
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Botón Cargar Más */
 .cargarMasContenedor {
-  @apply flex justify-center mt-10;
+  @apply mt-10 flex justify-center;
 }
 
 .cargarMasBtn {
-  @apply px-6 py-2.5 rounded-xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-300 text-xs font-semibold transition-colors cursor-pointer;
+  @apply cursor-pointer rounded-lg border border-slate-700 bg-[#080d19] px-6 py-2.5 text-xs font-semibold text-slate-300 transition-colors hover:border-red-500 hover:bg-slate-800;
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import peliculasTotales from '../data/moviesData.json'; // Todas tus 20+ películas
 import styles from '../components/Catalogo.module.css';
+import PageLayout from '../components/PageLayout';
 
 export default function Catalogo() {
   const [filtroActivo, setFiltroActivo] = useState('TODAS');
@@ -53,13 +54,15 @@ export default function Catalogo() {
   const peliculasVisibles = peliculas.slice(0, limiteVisible);
 
   return (
-    <section className={styles.contenedor}>
-      
-      {/* 1. Sub-Navbar de Filtros */}
+    <PageLayout
+      title="Catálogo"
+      description={`Explora películas y series${filtroActivo !== 'TODAS' ? ` • Ordenado por: ${filtroActivo}` : ''}`}
+    >
       <div className={styles.filtrosContenedor}>
         {filtros.map((filtro) => (
           <button
             key={filtro}
+            type="button"
             onClick={() => handleFiltroClick(filtro)}
             className={`${styles.filtroBtn} ${filtroActivo === filtro ? styles.filtroBtnActivo : ''}`}
           >
@@ -68,15 +71,6 @@ export default function Catalogo() {
         ))}
       </div>
 
-      {/* 2. Encabezado */}
-      <div className={styles.headerSeccion}>
-        <h1 className={styles.titulo}>Catálogo</h1>
-        <p className={styles.subtitulo}>
-          Explora películas y series {filtroActivo !== 'TODAS' && `• Ordenado por: ${filtroActivo}`}
-        </p>
-      </div>
-
-      {/* 3. Grid de Películas (Mostramos solo las cortadas por 'peliculasVisibles') */}
       <div className={styles.gridPeliculas}>
         {peliculasVisibles.map((pelicula) => (
           <div key={pelicula.id} className={styles.tarjeta}>
@@ -88,9 +82,7 @@ export default function Catalogo() {
 
             <div className={styles.overlay}>
               <div className={styles.infoSuperior}>
-                <span className={styles.badgeGenero}>
-                  {pelicula.genero}
-                </span>
+                <span className={styles.badgeGenero}>{pelicula.genero}</span>
                 <div className={styles.calificacionContainer}>
                   <span>{pelicula.calificacion}</span>
                   <span className={styles.estrella}>★</span>
@@ -110,15 +102,17 @@ export default function Catalogo() {
         ))}
       </div>
 
-      {/* 4. Botón de Cargar más (Se oculta si ya se muestran todas las películas del JSON) */}
       {limiteVisible < peliculas.length && (
         <div className={styles.cargarMasContenedor}>
-          <button onClick={handleCargarMas} className={styles.cargarMasBtn}>
+          <button
+            type="button"
+            onClick={handleCargarMas}
+            className={styles.cargarMasBtn}
+          >
             Cargar más películas...
           </button>
         </div>
       )}
-
-    </section>
+    </PageLayout>
   );
 }

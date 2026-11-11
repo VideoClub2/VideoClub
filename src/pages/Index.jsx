@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PageLayout from '../components/PageLayout';
 
 const peliculasIniciales = [
   {
@@ -60,38 +61,29 @@ export default function Index() {
   const [peliculaSeleccionada, setPeliculaSeleccionada] = useState(null);
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-white">
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <section className="mb-12 rounded-3xl border border-slate-800 bg-gradient-to-br from-red-950 via-[#111827] to-[#070b14] px-6 py-12 md:px-12 md:py-16">
-          <p className="font-semibold uppercase tracking-widest text-red-400">
-            Tu pasión por el cine
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold md:text-6xl">
-            Bienvenido a Fantasía Videoclub
-          </h1>
-          <p className="mt-5 max-w-2xl text-slate-300">
-            Explora películas, descubre tus próximos favoritos y disfruta de
-            nuestra selección de acción y otros géneros.
-          </p>
+    <PageLayout
+      title="Fantasía Videoclub"
+      description="Explora películas, descubre tus próximos favoritos y disfruta de nuestra selección de acción y otros géneros."
+    >
+      <div className="mb-8 flex justify-center">
           <Link
             to="/catalogo"
-            className="mt-8 inline-flex rounded-lg bg-red-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-red-700"
+            className="inline-flex rounded-lg bg-red-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-red-700"
           >
             Explorar catálogo
           </Link>
-        </section>
-
-        <section>
-          <h2 className="mb-2 text-2xl font-semibold">Estrenos destacados</h2>
-          <p className="mb-6 text-slate-400">
-            Selección de películas para empezar a explorar.
-          </p>
-          <GridPeliculas
-            peliculas={peliculasIniciales.slice(0, 3)}
-            onSeleccionar={setPeliculaSeleccionada}
-          />
-        </section>
       </div>
+
+      <section>
+        <h2 className="mb-2 text-2xl font-semibold">Estrenos destacados</h2>
+        <p className="mb-6 text-slate-400">
+          Selección de películas para empezar a explorar.
+        </p>
+        <GridPeliculas
+          peliculas={peliculasIniciales.slice(0, 3)}
+          onSeleccionar={setPeliculaSeleccionada}
+        />
+      </section>
 
       {peliculaSeleccionada && (
         <div
@@ -122,6 +114,6 @@ export default function Index() {
           </section>
         </div>
       )}
-    </div>
+    </PageLayout>
   );
 }
