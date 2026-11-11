@@ -1,6 +1,7 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
+import Index from './pages/Index';
 import Catalogo from './pages/Catalogo';
 import Ubicacion from './pages/Ubicacion';
 import AddMovie from './pages/AddMovie';
@@ -14,7 +15,7 @@ export default function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<Navigate to="/catalogo" replace />} />
+            <Route path="/" element={<Index />} />
             <Route path="/catalogo" element={<Catalogo />} />
             <Route path="/ubicacion" element={<Ubicacion />} />
             <Route path="/add-movie" element={<AddMovie />} />

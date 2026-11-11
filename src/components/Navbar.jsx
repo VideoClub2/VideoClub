@@ -24,7 +24,7 @@ export default function Navbar() {
 
       {/* Desktop navigation */}
       <nav className="hidden md:flex space-x-8 text-sm font-semibold italic text-slate-300">
-        <Link to="/catalogo" className="hover:text-red-500 transition-colors">
+        <Link to="/" className="hover:text-red-500 transition-colors">
           Inicio
         </Link>
 
@@ -60,7 +60,7 @@ export default function Navbar() {
         }`}
       >
         <Link
-          to="/catalogo"
+          to="/"
           onClick={() => setIsMenuOpen(false)}
           className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
         >
