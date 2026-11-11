@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-  const [menuAbierto, setMenuAbierto] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="relative flex items-center justify-between px-4 md:px-8 py-4 bg-[#0a0f1d]/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
@@ -22,7 +22,7 @@ export default function Navbar() {
         </span>
       </div>
 
-      {/* Menú ordenador */}
+      {/* Desktop navigation */}
       <nav className="hidden md:flex space-x-8 text-sm font-semibold italic text-slate-300">
         <Link to="/" className="hover:text-red-500 transition-colors">
           Inicio
@@ -41,40 +41,56 @@ export default function Navbar() {
         </a>
       </nav>
 
-      {/* Botón móvil */}
+      {/* Mobile menu button */}
       <button
-        onClick={() => setMenuAbierto(!menuAbierto)}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="md:hidden text-white text-2xl"
-        aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
-        aria-expanded={menuAbierto}
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isMenuOpen}
       >
-        {menuAbierto ? '✕' : '☰'}
+        {isMenuOpen ? '✕' : '☰'}
       </button>
 
-      {/* Menú móvil */}
-      {menuAbierto && (
-        <nav className="absolute top-full left-0 w-full flex flex-col bg-[#0a0f1d] border-b border-slate-800 md:hidden">
-          <Link to="/" onClick={() => setMenuAbierto(false)}
-            className="px-6 py-4 text-slate-300 hover:text-red-500">
-            Inicio
-          </Link>
+      {/* Animated mobile menu */}
+      <nav
+        className={`absolute top-full left-0 w-full flex flex-col bg-[#0a0f1d] border-b border-slate-800 md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen
+            ? 'max-h-64 opacity-100 translate-y-0'
+            : 'max-h-0 opacity-0 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <Link
+          to="/"
+          onClick={() => setIsMenuOpen(false)}
+          className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
+        >
+          Inicio
+        </Link>
 
-          <Link to="/" onClick={() => setMenuAbierto(false)}
-            className="px-6 py-4 text-slate-300 hover:text-red-500">
-            Catálogo
-          </Link>
+        <Link
+          to="/"
+          onClick={() => setIsMenuOpen(false)}
+          className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
+        >
+          Catálogo
+        </Link>
 
-          <Link to="/add-movie" onClick={() => setMenuAbierto(false)}
-            className="px-6 py-4 text-slate-300 hover:text-red-500">
-            Formulario
-          </Link>
+        <Link
+          to="/add-movie"
+          onClick={() => setIsMenuOpen(false)}
+          className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
+        >
+          Formulario
+        </Link>
 
-          <a href="#ubicacion" onClick={() => setMenuAbierto(false)}
-            className="px-6 py-4 text-slate-300 hover:text-red-500">
-            Ubicación
-          </a>
-        </nav>
-      )}
+        <a
+          href="#ubicacion"
+          onClick={() => setIsMenuOpen(false)}
+          className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
+        >
+          Ubicación
+        </a>
+      </nav>
     </header>
   );
 }
