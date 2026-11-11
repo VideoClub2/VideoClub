@@ -6,7 +6,7 @@
       "genero": "ACCIÓN",
       "calificacion": 4.8,
       "anio": 2024,
-      "portada": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500&auto=format&fit=crop"
+      "portada": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.S8JTtyDEg5xxpCCJ2VzwOAHaKk%3Fr%3D0%26pid%3DApi&f=1&ipt=44ff333208e3b0dbfd4f0556981fa5513af502e4b066fdd4cb67d775bde39970&ipo=images"
     },
     {
       "id": "2",
@@ -14,15 +14,160 @@
       "genero": "DRAMA",
       "calificacion": 4.6,
       "anio": 2023,
-      "portada": "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=500&auto=format&fit=crop"
+      "portada": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.AOsQBlfoQFAfgHaFTr3z9AHaKe%3Fr%3D0%26pid%3DApi&f=1&ipt=004ca188db6eb98d86101781bfc2784323f16355b73d5f12f6df8cecf0578824&ipo=images"
     },
     {
+      "id": "3",
       "titulo": "Harry Potter y la piedra filosofal",
       "genero": "DRAMA",
       "calificacion": 4.6,
       "anio": 2001,
-      "portada": "https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
+      "portada": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-TF8bS9iO95Q%2FTdhgtn3MXTI%2FAAAAAAAAAi4%2F66xBC_2W1QU%2Fs1600%2Fharry-potter-y-la-piedra-filosofal-poster.jpg&f=1&nofb=1&ipt=fd40a6e3881479524bf6118afef439218025fe91c6709e5ee1201b7103b6dbe9&ipo=images",
       "id": "TW4TXDVWNOg"
+    },
+    {
+      "id": "movies-data-1",
+      "titulo": "ElRegreso",
+      "genero": "ACCIÓN",
+      "calificacion": 4.8,
+      "anio": 2024,
+      "portada": "/imagenes/ElRegreso.jpg"
+    },
+    {
+      "id": "movies-data-2",
+      "titulo": "LaEraDeHielo",
+      "genero": "DRAMA",
+      "calificacion": 4.6,
+      "anio": 2023,
+      "portada": "/imagenes/LaEraDeHielo.jpg"
+    },
+    {
+      "id": "movies-data-3",
+      "titulo": "LosIncreibles",
+      "genero": "CIENCIA",
+      "calificacion": 4.9,
+      "anio": 2024,
+      "portada": "/imagenes/LosIncreibles.jpg"
+    },
+    {
+      "id": "movies-data-4",
+      "titulo": "Madagascar",
+      "genero": "COMEDIA",
+      "calificacion": 4.7,
+      "anio": 2024,
+      "portada": "/imagenes/Madagascar.jpg"
+    },
+    {
+      "id": "movies-data-5",
+      "titulo": "Shrek1",
+      "genero": "SUSPENSO",
+      "calificacion": 4.8,
+      "anio": 2024,
+      "portada": "/imagenes/Shrek1.jpg"
+    },
+    {
+      "id": "movies-data-6",
+      "titulo": "Shrek2",
+      "genero": "ROMANCE",
+      "calificacion": 4.5,
+      "anio": 2024,
+      "portada": "/imagenes/Shrek2.jpg"
+    },
+    {
+      "id": "movies-data-7",
+      "titulo": "Shrek3",
+      "genero": "ACCIÓN",
+      "calificacion": 4.3,
+      "anio": 2022,
+      "portada": "/imagenes/Shrek3.jpg"
+    },
+    {
+      "id": "movies-data-8",
+      "titulo": "ToyStory1",
+      "genero": "SUSPENSO",
+      "calificacion": 4.1,
+      "anio": 2021,
+      "portada": "/imagenes/ToyStory1.jpg"
+    },
+    {
+      "id": "movies-data-9",
+      "titulo": "ToyStory2",
+      "genero": "CIENCIA",
+      "calificacion": 4.7,
+      "anio": 2023,
+      "portada": "/imagenes/ToyStory2.jpg"
+    },
+    {
+      "id": "movies-data-10",
+      "titulo": "ToyStory3",
+      "genero": "COMEDIA",
+      "calificacion": 3.9,
+      "anio": 2022,
+      "portada": "/imagenes/ToyStory3.jpg"
+    },
+    {
+      "id": "movies-data-11",
+      "titulo": "ToyStory4",
+      "genero": "DRAMA",
+      "calificacion": 4.9,
+      "anio": 2024,
+      "portada": "/imagenes/ToyStory4.jpg"
+    },
+    {
+      "id": "movies-data-12",
+      "titulo": "dune1",
+      "genero": "ROMANCE",
+      "calificacion": 4.2,
+      "anio": 2023,
+      "portada": "/imagenes/dune1.jpg"
+    },
+    {
+      "id": "movies-data-13",
+      "titulo": "Elementos",
+      "genero": "ACCIÓN",
+      "calificacion": 4.6,
+      "anio": 2023,
+      "portada": "/imagenes/Elementos.jpg"
+    },
+    {
+      "id": "movies-data-14",
+      "titulo": "HastaElUltimoHombre",
+      "genero": "SUSPENSO",
+      "calificacion": 4.4,
+      "anio": 2021,
+      "portada": "/imagenes/HastaElUltimoHombre.jpg"
+    },
+    {
+      "id": "movies-data-15",
+      "titulo": "LeeMiller",
+      "genero": "CIENCIA",
+      "calificacion": 4.8,
+      "anio": 2024,
+      "portada": "/imagenes/LeeMiller.jpg"
+    },
+    {
+      "id": "movies-data-16",
+      "titulo": "Marte",
+      "genero": "ROMANCE",
+      "calificacion": 4.0,
+      "anio": 2020,
+      "portada": "/imagenes/Marte.jpg"
+    },
+    {
+      "id": "movies-data-17",
+      "titulo": "MartinFreeman",
+      "genero": "DRAMA",
+      "calificacion": 4.5,
+      "anio": 2022,
+      "portada": "/imagenes/MartinFreeman.jpg"
+    },
+    {
+      "id": "movies-data-18",
+      "titulo": "PrimerHombre",
+      "genero": "COMEDIA",
+      "calificacion": 3.8,
+      "anio": 2021,
+      "portada": "/imagenes/PrimerHombre.jpg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

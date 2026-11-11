@@ -8,28 +8,21 @@ const peliculasIniciales = [
     titulo: 'Shelter: El Protector',
     categoria: 'Acción',
     desc: 'Un ex-agente debe proteger a una joven de una red criminal.',
-    img: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&auto=format&fit=crop&q=80',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.OYY8WxeAxs4rgoCAtqHn0wHaKl%3Fr%3D0%26pid%3DApi&f=1&ipt=30ed885897a7ed4447b7b9c14815070dee4af39ff09506670dee9b5d28b0d312&ipo=images',
   },
   {
     id: 2,
     titulo: 'Venom',
     categoria: 'Ciencia Ficción / Acción',
     desc: 'Un periodista entra en contacto con un simbionte alienígena.',
-    img: 'https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=600&auto=format&fit=crop&q=80',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.YmwOe4TidzpeQeEyfmq8OwHaKq%3Fr%3D0%26pid%3DApi&f=1&ipt=1c82dbf8f39f0f8f1a0edd90de4be37fa9d24004aa4d55a7d595d8519d9a333d&ipo=images',
   },
   {
     id: 3,
     titulo: 'The Dark Knight',
     categoria: 'Acción / Drama',
     desc: 'Batman se enfrenta al Joker para salvar Gotham.',
-    img: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
-  },
-  {
-    id: 4,
-    titulo: 'Tomb Raider',
-    categoria: 'Aventura / Acción',
-    desc: 'Lara Croft se embarca en una peligrosa expedición a una isla misteriosa.',
-    img: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    img: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.C58MrUTynA5UG12vuT_jwwHaLH%3Fr%3D0%26pid%3DApi&f=1&ipt=91b401b3085f1d53e7cdcc72209108753d6715b6ed8d2c432ee618d8f33ce76e&ipo=images',
   },
 ];
 
