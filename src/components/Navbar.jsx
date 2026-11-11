@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
@@ -24,11 +24,11 @@ export default function Navbar() {
 
       {/* Desktop navigation */}
       <nav className="hidden md:flex space-x-8 text-sm font-semibold italic text-slate-300">
-        <Link to="/" className="hover:text-red-500 transition-colors">
+        <Link to="/catalogo" className="hover:text-red-500 transition-colors">
           Inicio
         </Link>
 
-        <Link to="/" className="hover:text-red-500 transition-colors">
+        <Link to="/catalogo" className="hover:text-red-500 transition-colors">
           Catálogo
         </Link>
 
@@ -36,9 +36,9 @@ export default function Navbar() {
           Formulario
         </Link>
 
-        <a href="#ubicacion" className="hover:text-red-500 transition-colors">
+        <Link to="/ubicacion" className="hover:text-red-500 transition-colors">
           Ubicación
-        </a>
+        </Link>
       </nav>
 
       {/* Mobile menu button */}
@@ -60,7 +60,7 @@ export default function Navbar() {
         }`}
       >
         <Link
-          to="/"
+          to="/catalogo"
           onClick={() => setIsMenuOpen(false)}
           className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
         >
@@ -68,7 +68,7 @@ export default function Navbar() {
         </Link>
 
         <Link
-          to="/"
+          to="/catalogo"
           onClick={() => setIsMenuOpen(false)}
           className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
         >
@@ -83,13 +83,13 @@ export default function Navbar() {
           Formulario
         </Link>
 
-        <a
-          href="#ubicacion"
+        <Link
+          to="/ubicacion"
           onClick={() => setIsMenuOpen(false)}
           className="px-6 py-4 text-slate-300 hover:text-red-500 transition-colors"
         >
           Ubicación
-        </a>
+        </Link>
       </nav>
     </header>
   );

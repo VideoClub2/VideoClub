@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import peliculasTotales from '../data/moviesData.json'; // Todas tus 20+ películas
-import styles from './Catalogo.module.css';
+import styles from '../components/Catalogo.module.css';
 
 export default function Catalogo() {
   const [filtroActivo, setFiltroActivo] = useState('TODAS');
