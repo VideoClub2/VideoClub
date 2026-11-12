@@ -1,19 +1,58 @@
-# React + Vite
+# Fantasía Videoclub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+We are a team of 3.
 
-Currently, two official plugins are available:
+A movie catalog web app built with React and Vite. Users can explore the catalog, filter movies by category, and view details for each title.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Requirements
 
-## React Compiler
+- Node.js and npm
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Installation and setup
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+1. Clone the repository and move into the project folder.
+2. Install dependencies:
 
-## Expanding the ESLint configuration
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Start the mock API server in one terminal:
+
+   ```bash
+   npm run server
+   ```
+
+4. Start the frontend in another terminal:
+
+   ```bash
+   npm run dev
+   ```
+
+Open the local URL shown by Vite in the browser. The application loads its movie data from `http://localhost:3000/movies`, so keep the server running while using the app.
+
+## Features
+
+- Browse the movie catalog
+- Sort by popularity, year, rating, or genre
+- View detailed movie information
+- Navigate through the app pages
+
+## Scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run server` | Start JSON Server using `db.json` |
+| `npm run build` | Build the app for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+
+## Tech stack
+
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+- JSON Server
