@@ -50,9 +50,9 @@ Open the local URL shown by Vite in the browser. The application loads its movie
 
 ## Tech stack
 
-- React
-- Vite
-- Tailwind CSS
-- React Router
-- Axios
-- JSON Server
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![React Router](https://img.shields.io/badge/React_Router-7-CA4245?logo=reactrouter&logoColor=white)](https://reactrouter.com/)
+[![Axios](https://img.shields.io/badge/Axios-1-5A29E4?logo=axios&logoColor=white)](https://axios-http.com/)
+[![JSON Server](https://img.shields.io/badge/JSON_Server-1-222222?logo=json&logoColor=white)](https://github.com/typicode/json-server)
