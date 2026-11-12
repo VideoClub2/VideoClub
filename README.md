@@ -1,6 +1,8 @@
 # Fantasía Videoclub
 
-We are a team of 3.
+We are a team of 3 students working on this project as part of our learning process.
+
+This is an educational project created to practice React, routing, API consumption, UI development, and teamwork in a web application context.
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
